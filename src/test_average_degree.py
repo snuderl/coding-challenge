@@ -1,7 +1,7 @@
-import unittest2
+import unittest
 import average_degree
 
-class RunningAvgDegreTest(unittest2.TestCase):
+class RunningAvgDegreTest(unittest.TestCase):
 	def setUp(self):
 		self.avg = average_degree.RunningAvgDegre()
 
@@ -71,7 +71,7 @@ class RunningAvgDegreTest(unittest2.TestCase):
 		self.assertEquals(len(self.avg.edges), 5)
 
 
-class ParseTest(unittest2.TestCase):
+class ParseTest(unittest.TestCase):
 	def test_parse_line(self):
 		line = "We're #hiring! Click to apply: SMB Analyst #BusinessMgmt #NettempsJobs #MenloPark (timestamp: Fri Oct 30 15:29:45 +0000 2015)"
 		tags, ts = average_degree.parse_line(line)
@@ -89,4 +89,4 @@ class ParseTest(unittest2.TestCase):
 
 
 if __name__ == "__main__":
-	unittest2.main()
+	unittest.main()
