@@ -67,6 +67,7 @@ class RunningAvgDegre(object):
     num_vertices = len(self.vertices)
     if num_vertices == 0:
       return 0.0
+    # We have to multiply edges by 2 as we store each edge only once.
     return len(self.edges) * 2 / float(num_vertices)
 
 
